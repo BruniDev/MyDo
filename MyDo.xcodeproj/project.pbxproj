@@ -13,6 +13,8 @@
 		7B9561BA2B3CF3370019B04F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B9561B92B3CF3370019B04F /* Preview Assets.xcassets */; };
 		7B9561BC2B3CF3370019B04F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9561BB2B3CF3370019B04F /* Persistence.swift */; };
 		7B9561BF2B3CF3370019B04F /* MyDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B9561BD2B3CF3370019B04F /* MyDo.xcdatamodeld */; };
+		7B9561C62B3CF4180019B04F /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9561C52B3CF4180019B04F /* TodayView.swift */; };
+		7B9561C92B3CF5D80019B04F /* GetCurrentDateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9561C82B3CF5D80019B04F /* GetCurrentDateTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		7B9561B92B3CF3370019B04F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7B9561BB2B3CF3370019B04F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		7B9561BE2B3CF3370019B04F /* MyDo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyDo.xcdatamodel; sourceTree = "<group>"; };
+		7B9561C52B3CF4180019B04F /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		7B9561C82B3CF5D80019B04F /* GetCurrentDateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrentDateTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +59,12 @@
 		7B9561B12B3CF3360019B04F /* MyDo */ = {
 			isa = PBXGroup;
 			children = (
-				7B9561B22B3CF3360019B04F /* MyDoApp.swift */,
+				7B9561C72B3CF5C50019B04F /* Date */,
+				7B9561CC2B3D4AEE0019B04F /* View */,
 				7B9561B42B3CF3360019B04F /* ContentView.swift */,
-				7B9561B62B3CF3370019B04F /* Assets.xcassets */,
+				7B9561B22B3CF3360019B04F /* MyDoApp.swift */,
 				7B9561BB2B3CF3370019B04F /* Persistence.swift */,
+				7B9561B62B3CF3370019B04F /* Assets.xcassets */,
 				7B9561BD2B3CF3370019B04F /* MyDo.xcdatamodeld */,
 				7B9561B82B3CF3370019B04F /* Preview Content */,
 			);
@@ -71,6 +77,22 @@
 				7B9561B92B3CF3370019B04F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7B9561C72B3CF5C50019B04F /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				7B9561C82B3CF5D80019B04F /* GetCurrentDateTime.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		7B9561CC2B3D4AEE0019B04F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B9561C52B3CF4180019B04F /* TodayView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,9 +165,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B9561C92B3CF5D80019B04F /* GetCurrentDateTime.swift in Sources */,
 				7B9561BC2B3CF3370019B04F /* Persistence.swift in Sources */,
 				7B9561B52B3CF3360019B04F /* ContentView.swift in Sources */,
 				7B9561BF2B3CF3370019B04F /* MyDo.xcdatamodeld in Sources */,
+				7B9561C62B3CF4180019B04F /* TodayView.swift in Sources */,
 				7B9561B32B3CF3360019B04F /* MyDoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
