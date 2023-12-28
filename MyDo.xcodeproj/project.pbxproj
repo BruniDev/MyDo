@@ -60,13 +60,13 @@
 			isa = PBXGroup;
 			children = (
 				7B9561C72B3CF5C50019B04F /* Date */,
-				7B9561B22B3CF3360019B04F /* MyDoApp.swift */,
+				7B9561CC2B3D4AEE0019B04F /* View */,
 				7B9561B42B3CF3360019B04F /* ContentView.swift */,
-				7B9561B62B3CF3370019B04F /* Assets.xcassets */,
+				7B9561B22B3CF3360019B04F /* MyDoApp.swift */,
 				7B9561BB2B3CF3370019B04F /* Persistence.swift */,
+				7B9561B62B3CF3370019B04F /* Assets.xcassets */,
 				7B9561BD2B3CF3370019B04F /* MyDo.xcdatamodeld */,
 				7B9561B82B3CF3370019B04F /* Preview Content */,
-				7B9561C52B3CF4180019B04F /* TodayView.swift */,
 			);
 			path = MyDo;
 			sourceTree = "<group>";
@@ -85,6 +85,14 @@
 				7B9561C82B3CF5D80019B04F /* GetCurrentDateTime.swift */,
 			);
 			path = Date;
+			sourceTree = "<group>";
+		};
+		7B9561CC2B3D4AEE0019B04F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B9561C52B3CF4180019B04F /* TodayView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
