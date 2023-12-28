@@ -9,13 +9,46 @@ import SwiftUI
 
 struct TodayView: View {
     var body: some View {
-        VStack{
-            Text("오늘")
-            Text(getCurrentDateTime())
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
-            })
+
+            VStack
+            {
+                GeometryReader { geometry in
+                VStack(alignment: .leading){
+                    
+                    Text("오늘")
+                        .font(Font.custom("Apple SD Gothic Neo", size: 40).weight(.bold)
+                        )
+                        .padding(.bottom,25)
+                    
+                    
+    
+                    Text(getCurrentDateTime())
+                        .font(Font.custom("Apple SD Gothic Neo", size: 20).weight(.bold)
+                        )
+                    
+                    
+                    
+                }
+                .frame(width: geometry.size.width/2,height: geometry.size.height/4)
+                Spacer()
+                
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    
+                    Image(systemName: "plus")
+                        .foregroundColor(.white)
+                        .font(.system(size: 50,weight: .regular))
+                        .frame(width: 80, height: 80)
+                        .background(Color(.blue))
+                        .cornerRadius(100)
+                })
+                .frame(width: geometry.size.width * 1.5,height: geometry.size.height * 1.75)
+                
+                .padding()
+                
+                
+            }
         }
+        
     }
 }
 #Preview {
