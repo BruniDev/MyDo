@@ -39,15 +39,7 @@ struct TodayView: View {
                         
                         }
                     }
-                   
-//                    .sheet(isPresented: $showSheet) {
-//                        
-//                        AddAgendaSheet()
-//                            .frame(width: geometry.size.width * 1.5,height: geometry.size.height * 1.75)
-//                        
-//                            .padding()
-//                        
-//                    }
+
                 }
                 
             }
