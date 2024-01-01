@@ -9,12 +9,31 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    
+    //    @Environment(\.managedObjectContext) var
+    @Environment(\.managedObjectContext) private var viewContext
+  
+    @FetchRequest(entity: ToDoItem.entity(),
+                  sortDescriptors: [
+                    NSSortDescriptor(keyPath: \ToDoItem.id, ascending: false)
+                  ], animation: .default)
+    
+    private var todos: FetchedResults<ToDoItem>
 
+    
+    @State private var showNewTask: Bool = false
+    @State private var searchText: String = ""
+    
     var body: some View {
-        TodayView()
-            .overlay(alignment: .bottomTrailing){
+      
+        NavigationView {
+            
+            VStack{
+                TodayView()
+                Spacer()
+                
                 Button(action: {
-                   
+                    showNewTask = true
                 }, label: {
                     Image(systemName: "plus")
                         .foregroundColor(.white)
@@ -25,9 +44,19 @@ struct ContentView: View {
                         .padding()
                 })
             }
+            .sheet(isPresented: $showNewTask){
+                NewTaskView()
+                    .transition(.move(edge: .bottom))
+                    .animation(.default, value: self.showNewTask)
+                    .presentationDetents([.height(150)])
+                
+            }
+        }
+            
+        
     }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}
