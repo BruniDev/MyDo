@@ -9,11 +9,23 @@ import UIKit
 
 final class TodoCell : UITableViewCell {
     
-   
+    // MARK: - backView
+    let backView : UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+ 
+        view.layer.cornerRadius = 10
+        view.layer.shadowOpacity = 0.25
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     // MARK: - Todo의 제목
     let todoTitleLabel : UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.text = "투두 제목"
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         
@@ -23,6 +35,7 @@ final class TodoCell : UITableViewCell {
     let projectTitleLabel : UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 12)
+        label.text = "프로젝트 제목"
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -39,22 +52,27 @@ final class TodoCell : UITableViewCell {
         
         return stView
     }()
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: .default, reuseIdentifier: reuseIdentifier)
+        
+        setConstraints()
+    }
     
-    // MARK: - backView
-    let backView : UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     // MARK: - 완료, 미완료 확인할 수 있음
-    let isCompleted : UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 12)
-        label.text = "완료"
-        label.textColor  = UIColor(red: 0.37, green: 0.2, blue: 0.88,alpha: 1)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    let isCompleted : UIButton = {
+        let button = UIButton()
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
+        button.setTitleColor(UIColor(red: 0.37, green: 0.2, blue: 0.88,alpha: 1), for: .normal)
+        button.setTitle("완료", for: .normal)
+        button.backgroundColor = UIColor(red: 0.8, green: 0.75, blue: 0.96,alpha: 1)
+        button.layer.cornerRadius = 5
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
     
     // MARK: - 우측상단에 있는 설정버튼
@@ -80,9 +98,16 @@ final class TodoCell : UITableViewCell {
         
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: self.backView.leadingAnchor, constant: 20),
-            stackView.topAnchor.constraint(equalToSystemSpacingBelow: self.backView.topAnchor, multiplier: 18)
+            stackView.topAnchor.constraint(equalTo: self.backView.topAnchor,constant: 18)
+//            stackView.bottomAnchor.constraint(equalTo: self.backView.bottomAnchor, constant: 17)
         ])
         
+        self.contentView.addSubview(isCompleted)
+        
+        NSLayoutConstraint.activate([
+            isCompleted.trailingAnchor.constraint(equalTo: self.backView.trailingAnchor, constant: -20),
+            isCompleted.topAnchor.constraint(equalTo: self.backView.topAnchor, constant: 45)
+        ])
         
         
         
