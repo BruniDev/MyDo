@@ -14,6 +14,10 @@
 		7BC30A912B5E1CBD00979738 /* MyDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BC30A8F2B5E1CBD00979738 /* MyDo.xcdatamodeld */; };
 		7BC30A932B5E1CBE00979738 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC30A922B5E1CBE00979738 /* Assets.xcassets */; };
 		7BC30A962B5E1CBE00979738 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC30A942B5E1CBE00979738 /* LaunchScreen.storyboard */; };
+		7BC30AA92B5E258E00979738 /* TodoData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC30AA52B5E258E00979738 /* TodoData+CoreDataClass.swift */; };
+		7BC30AAA2B5E258E00979738 /* TodoData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC30AA62B5E258E00979738 /* TodoData+CoreDataProperties.swift */; };
+		7BC30AAB2B5E258E00979738 /* Project+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC30AA72B5E258E00979738 /* Project+CoreDataClass.swift */; };
+		7BC30AAC2B5E258E00979738 /* Project+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC30AA82B5E258E00979738 /* Project+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		7BC30A922B5E1CBE00979738 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BC30A952B5E1CBE00979738 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BC30A972B5E1CBE00979738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BC30AA52B5E258E00979738 /* TodoData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7BC30AA62B5E258E00979738 /* TodoData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7BC30AA72B5E258E00979738 /* Project+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7BC30AA82B5E258E00979738 /* Project+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,10 @@
 				7BC30A942B5E1CBE00979738 /* LaunchScreen.storyboard */,
 				7BC30A972B5E1CBE00979738 /* Info.plist */,
 				7BC30A8F2B5E1CBD00979738 /* MyDo.xcdatamodeld */,
+				7BC30AA52B5E258E00979738 /* TodoData+CoreDataClass.swift */,
+				7BC30AA62B5E258E00979738 /* TodoData+CoreDataProperties.swift */,
+				7BC30AA72B5E258E00979738 /* Project+CoreDataClass.swift */,
+				7BC30AA82B5E258E00979738 /* Project+CoreDataProperties.swift */,
 			);
 			path = MyDo;
 			sourceTree = "<group>";
@@ -143,8 +155,12 @@
 			files = (
 				7BC30A8B2B5E1CBD00979738 /* ViewController.swift in Sources */,
 				7BC30A872B5E1CBD00979738 /* AppDelegate.swift in Sources */,
+				7BC30AAC2B5E258E00979738 /* Project+CoreDataProperties.swift in Sources */,
 				7BC30A912B5E1CBD00979738 /* MyDo.xcdatamodeld in Sources */,
+				7BC30AAB2B5E258E00979738 /* Project+CoreDataClass.swift in Sources */,
 				7BC30A892B5E1CBD00979738 /* SceneDelegate.swift in Sources */,
+				7BC30AA92B5E258E00979738 /* TodoData+CoreDataClass.swift in Sources */,
+				7BC30AAA2B5E258E00979738 /* TodoData+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
