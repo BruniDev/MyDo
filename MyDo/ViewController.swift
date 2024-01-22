@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     private let tableView = UITableView()
     
 

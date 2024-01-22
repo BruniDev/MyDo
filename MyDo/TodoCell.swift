@@ -9,11 +9,13 @@ import UIKit
 
 final class TodoCell : UITableViewCell {
     
+    
+    
     // MARK: - backView
     let backView : UIView = {
         let view = UIView()
         view.backgroundColor = .white
- 
+        
         view.layer.cornerRadius = 10
         view.layer.shadowOpacity = 0.25
         view.layer.shadowColor = UIColor.black.cgColor
@@ -71,16 +73,37 @@ final class TodoCell : UITableViewCell {
         button.setTitle("완료", for: .normal)
         button.backgroundColor = UIColor(red: 0.8, green: 0.75, blue: 0.96,alpha: 1)
         button.layer.cornerRadius = 5
+        button.contentEdgeInsets = UIEdgeInsets(top: 4, left: 12, bottom: 4, right: 12)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
     // MARK: - 우측상단에 있는 설정버튼
     let settingButton : UIButton = {
-        let button = UIButton(type : .custom)
+        let button = UIButton(type: .system)
+        button.menu = UIMenu(title: "", children: [
+            UIAction(title: "수정하기",image : UIImage(systemName: "pencil"),handler: { _ in }),UIAction(title: "삭제하기",image: UIImage(systemName: "trash"),handler: { _ in })
+        ])
+        button.showsMenuAsPrimaryAction = true
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.setTitle("...", for: .normal)
+        button.setTitleColor(UIColor.black, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
+        
+        
+    }()
+    
+    
+    private lazy var stackViewRight : UIStackView = {
+        let stViewRight = UIStackView(arrangedSubviews: [settingButton,isCompleted])
+        stViewRight.spacing = 15
+        stViewRight.axis = .vertical
+        stViewRight.distribution = .fill
+        stViewRight.alignment = .fill
+        stViewRight.translatesAutoresizingMaskIntoConstraints = false
+        stViewRight.alignment = .trailing
+        return stViewRight
     }()
     
     
@@ -99,23 +122,23 @@ final class TodoCell : UITableViewCell {
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: self.backView.leadingAnchor, constant: 20),
             stackView.topAnchor.constraint(equalTo: self.backView.topAnchor,constant: 18)
-//            stackView.bottomAnchor.constraint(equalTo: self.backView.bottomAnchor, constant: 17)
+            //            stackView.bottomAnchor.constraint(equalTo: self.backView.bottomAnchor, constant: 17)
         ])
         
-        self.contentView.addSubview(isCompleted)
+        self.contentView.addSubview(stackViewRight)
         
         NSLayoutConstraint.activate([
-            isCompleted.trailingAnchor.constraint(equalTo: self.backView.trailingAnchor, constant: -20),
-            isCompleted.topAnchor.constraint(equalTo: self.backView.topAnchor, constant: 45)
+            stackViewRight.trailingAnchor.constraint(equalTo: self.backView.trailingAnchor, constant: -20),
+            stackViewRight.topAnchor.constraint(equalTo: self.backView.topAnchor, constant: 5)
         ])
         
         
         
     }
-//    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-//        super.init(style: .default, reuseIdentifier: reuseIdentifier)
-//        
-//        setConstraints()
-//    }
+    //    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+    //        super.init(style: .default, reuseIdentifier: reuseIdentifier)
+    //
+    //        setConstraints()
+    //    }
     
 }
