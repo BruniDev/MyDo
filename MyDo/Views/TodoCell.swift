@@ -9,8 +9,6 @@ import UIKit
 
 final class TodoCell : UITableViewCell {
     
-    
-    
     // MARK: - backView
     let backView : UIView = {
         let view = UIView()

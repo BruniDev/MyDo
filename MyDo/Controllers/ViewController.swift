@@ -9,8 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     private let tableView = UITableView()
-    
+    private let button = FloatingButtonView()
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -34,16 +35,23 @@ class ViewController: UIViewController {
     
     func setupTableViewConstraints() {
         view.addSubview(tableView)
+        tableView.addSubview(button.mainFloatingButton)
+        
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            
+            button.mainFloatingButton.bottomAnchor.constraint(equalTo: tableView.frameLayoutGuide.bottomAnchor, constant: -30),
+            button.mainFloatingButton.trailingAnchor.constraint(equalTo: tableView.frameLayoutGuide.trailingAnchor, constant: -30)
+          
         ])
     }
-    
+    //코드수정
+  
     
 }
 
