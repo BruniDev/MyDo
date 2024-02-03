@@ -9,7 +9,32 @@ import UIKit
 
 class ViewController: UIViewController {
     private let tableView = UITableView()
-    private let button = FloatingButtonView()
+
+    private lazy var button : UIButton = {
+        let button = UIButton()
+    
+        button.translatesAutoresizingMaskIntoConstraints = false
+        var config = UIButton.Configuration.borderedProminent()
+        config.baseBackgroundColor = UIColor(red: 0.37, green: 0.2, blue: 0.88,alpha: 1)
+        config.cornerStyle = .capsule
+        config.image = UIImage(systemName: "plus")?.withConfiguration(UIImage.SymbolConfiguration(pointSize: 30, weight: .regular))
+        button.configuration = config
+        button.layer.shadowRadius = 10
+        button.layer.shadowOpacity = 0.3
+        button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
+       
+        return button
+    }()
+    
+    @objc func buttonTapped(_ button: UIButton) {
+        let makeTodoVC = makeTodoViewController()
+        
+        makeTodoVC.modalPresentationStyle = .formSheet
+        self.present(makeTodoVC,animated: true)
+    }
+  
+    
+    
 
     
     override func viewDidLoad() {
@@ -35,7 +60,7 @@ class ViewController: UIViewController {
     
     func setupTableViewConstraints() {
         view.addSubview(tableView)
-        tableView.addSubview(button.mainFloatingButton)
+        tableView.addSubview(button)
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -45,8 +70,8 @@ class ViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
             
-            button.mainFloatingButton.bottomAnchor.constraint(equalTo: tableView.frameLayoutGuide.bottomAnchor, constant: -30),
-            button.mainFloatingButton.trailingAnchor.constraint(equalTo: tableView.frameLayoutGuide.trailingAnchor, constant: -30)
+            button.bottomAnchor.constraint(equalTo: tableView.frameLayoutGuide.bottomAnchor, constant: -30),
+            button.trailingAnchor.constraint(equalTo: tableView.frameLayoutGuide.trailingAnchor, constant: -30)
           
         ])
     }

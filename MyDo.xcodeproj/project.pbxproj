@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B8CA5F72B6E256400D01350 /* makeTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8CA5F62B6E256400D01350 /* makeTodoViewController.swift */; };
 		7BC30A872B5E1CBD00979738 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC30A862B5E1CBD00979738 /* AppDelegate.swift */; };
 		7BC30A892B5E1CBD00979738 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC30A882B5E1CBD00979738 /* SceneDelegate.swift */; };
 		7BC30A8B2B5E1CBD00979738 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC30A8A2B5E1CBD00979738 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B8CA5F62B6E256400D01350 /* makeTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeTodoViewController.swift; sourceTree = "<group>"; };
 		7BC30A832B5E1CBD00979738 /* MyDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC30A862B5E1CBD00979738 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BC30A882B5E1CBD00979738 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				7BC30A8A2B5E1CBD00979738 /* ViewController.swift */,
+				7B8CA5F62B6E256400D01350 /* makeTodoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				7BC30AAB2B5E258E00979738 /* Project+CoreDataClass.swift in Sources */,
 				7BC30A892B5E1CBD00979738 /* SceneDelegate.swift in Sources */,
 				7BC30ABB2B608F7B00979738 /* FloatingButtonView.swift in Sources */,
+				7B8CA5F72B6E256400D01350 /* makeTodoViewController.swift in Sources */,
 				7BC30AA92B5E258E00979738 /* TodoData+CoreDataClass.swift in Sources */,
 				7BC30AAA2B5E258E00979738 /* TodoData+CoreDataProperties.swift in Sources */,
 			);
