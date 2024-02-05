@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TodoCell : UITableViewCell {
+final class ToDoCell : UITableViewCell {
     
     // MARK: - backView
     let backView : UIView = {

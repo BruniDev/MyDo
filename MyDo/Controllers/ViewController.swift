@@ -27,16 +27,13 @@ class ViewController: UIViewController {
     }()
     
     @objc func buttonTapped(_ button: UIButton) {
-        let makeTodoVC = makeTodoViewController()
+        let addToDoVC = addToDoViewController()
         
-        makeTodoVC.modalPresentationStyle = .formSheet
-        self.present(makeTodoVC,animated: true)
+        addToDoVC.modalPresentationStyle = .formSheet
+        self.present(addToDoVC,animated: true)
     }
   
-    
-    
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -49,7 +46,7 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.rowHeight = 100
-        tableView.register(TodoCell.self, forCellReuseIdentifier: "TodoCell")
+        tableView.register(ToDoCell.self, forCellReuseIdentifier: "ToDoCell")
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -87,7 +84,7 @@ extension ViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TodoCell", for: indexPath) as! TodoCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath) as! ToDoCell
         
         tableView.separatorStyle = .singleLine
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
