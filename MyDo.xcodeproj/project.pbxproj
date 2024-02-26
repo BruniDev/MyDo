@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B39EDF62B8C85A70047D36B /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B39EDF52B8C85A70047D36B /* AddTodoViewController.swift */; };
 		7BC30A872B5E1CBD00979738 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC30A862B5E1CBD00979738 /* AppDelegate.swift */; };
 		7BC30A892B5E1CBD00979738 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC30A882B5E1CBD00979738 /* SceneDelegate.swift */; };
 		7BC30A8B2B5E1CBD00979738 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC30A8A2B5E1CBD00979738 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B39EDF52B8C85A70047D36B /* AddTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
 		7BC30A832B5E1CBD00979738 /* MyDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC30A862B5E1CBD00979738 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BC30A882B5E1CBD00979738 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				7BC30A8A2B5E1CBD00979738 /* ViewController.swift */,
+				7B39EDF52B8C85A70047D36B /* AddTodoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				7BC30AAC2B5E258E00979738 /* Project+CoreDataProperties.swift in Sources */,
 				7BC30A912B5E1CBD00979738 /* MyDo.xcdatamodeld in Sources */,
 				7BC30AAF2B5E295900979738 /* TodoCell.swift in Sources */,
+				7B39EDF62B8C85A70047D36B /* AddTodoViewController.swift in Sources */,
 				7BC30AAB2B5E258E00979738 /* Project+CoreDataClass.swift in Sources */,
 				7BC30A892B5E1CBD00979738 /* SceneDelegate.swift in Sources */,
 				7BC30ABB2B608F7B00979738 /* FloatingButtonView.swift in Sources */,

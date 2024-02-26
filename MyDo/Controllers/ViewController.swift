@@ -17,9 +17,14 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         setupTableView()
         setupTableViewConstraints()
+        button.mainFloatingButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         // Do any additional setup after loading the view.
     }
 
+    @objc func buttonTapped() {
+        self.present(AddTodoViewController(),animated:  true)
+        
+    }
     func setupTableView() {
         tableView.dataSource = self
         tableView.separatorStyle = .none
@@ -30,13 +35,13 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.prefersLargeTitles = true
         tableView.reloadData()
+
     }
     
     
     func setupTableViewConstraints() {
         view.addSubview(tableView)
         tableView.addSubview(button.mainFloatingButton)
-        
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
