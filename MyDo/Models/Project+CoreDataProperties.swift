@@ -19,7 +19,7 @@ extension Project {
     @NSManaged public var title: String?
     @NSManaged public var date: Date?
     @NSManaged public var color: Int64
-    @NSManaged public var todoData: TodoData?
+    @NSManaged public var todoData: ToDoData?
 
 }
 
